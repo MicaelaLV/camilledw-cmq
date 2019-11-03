@@ -159,7 +159,7 @@ $tab-count: 50;
             text-align: left;
 
             @include mq($from: desktop-xs) {
-              @include x-rem(font-size, 16px);
+              @include x-rem(font-size, 18px);
               @include x-rem(line-height, 30px);
             }
           }
@@ -177,6 +177,11 @@ $tab-count: 50;
 
               &:before {
                 color: map-get($app, text-color);
+              }
+
+              @include mq($from: desktop-xs) {
+                @include x-rem(font-size, 18px);
+                @include x-rem(line-height, 30px);
               }
             }
           }

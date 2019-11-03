@@ -24,6 +24,20 @@ body {
         object-fit: contain;
         height: 100%;
         width: 100%;
+
+        &.bg--small {
+          @include mq($from: desktop-xs) {
+            display: none;
+          }
+        }
+
+        &.bg--big {
+          display: none;
+
+          @include mq($from: desktop-xs) {
+            display: initial;
+          }
+        }
       }
     }
 
@@ -44,6 +58,10 @@ body {
         height: 90%;
         min-width: 285px;
         width: 85vw;
+
+        @include mq($from: desktop-xs) {
+          height: 75%;
+        }
 
         .content-wrapper {
           // border: 1px solid royalblue; // testing borders
@@ -68,7 +86,7 @@ body {
 
           @include mq($from: desktop-xs) {
             order: 1;
-            width: 50%;
+            width: 40%;
           }
 
           .logo {
