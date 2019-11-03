@@ -1,0 +1,22 @@
+// ======================= \\
+//      $CONFIG
+// ======================= //
+
+@charset 'UTF-8';
+
+//           $Breakpoints             \\
+// ___________________________________//
+$mq-breakpoints: (
+  mobile       : 320px,
+  iphone6      : 375px,
+  phablet      : 480px,
+  nexus7       : 603px,
+  tablet       : 768px,
+  desktop-xs   : 992px,
+  desktop-s    : 1024px,
+  container    : 1139px,
+  desktop-md   : 1200px,
+  desktop-l    : 1280px,
+  desktop-lg   : 1440px,
+  large-screen : 1900px
+);

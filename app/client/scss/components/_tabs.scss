@@ -1,0 +1,219 @@
+.hide-input {
+  display: none;
+}
+
+// TABS
+// ____________
+$tab-count: 50;
+// REVIEW IF WE TOUCH THIS FILE BECAUSE IN section--product-details there is another loop ( because that page has another css by the design )
+
+.tabs-nav-list {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  min-width: 600px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+
+  @include mq($from: nexus7) {
+    margin-bottom: 50px;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    width: auto;
+
+    .tab-button {
+
+      .tab-text {
+        @include x-rem(font-size, 14px);
+        background: transparent;
+        color: rgba(map-get($app, coral), .3);
+        cursor: pointer;
+        display: block;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        font-family: "SuisseLight";
+        height: auto;
+        line-height: 14px;
+        margin: 0 auto;
+        opacity: 1;
+        position: relative;
+        text-align: left;
+        transition: color 200ms ease, opacity 250ms ease;
+        user-select: none;
+        white-space: nowrap;
+        width: 100%;
+        will-change: color;
+
+        &:hover {
+          color: rgba(map-get($app, coral), .55);
+        }
+
+        &.grey {
+          color: rgba(black, .3);
+
+          @include mq($from: tablet) {
+            @include x-rem(font-size, 20px);
+            @include x-rem(line-height, 26px);
+          }
+        }
+      }
+    }
+
+    &:first-child {
+      .tab-button {
+        padding-left: 0;
+      }
+    }
+
+    &:last-child {
+      .tab-button {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &.slides-list {
+    height: auto;
+    margin: 20px 0;
+
+    .slide {
+      height: auto;
+      width: auto;
+
+      span {
+        color: rgba(black, .3);
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.tabs-content-wrapper {
+  display: block;
+  height: 100%;
+  padding: 0;
+
+  .tab-content {
+    margin: auto;
+    max-height: 0;
+    opacity: 0;
+    overflow-y: hidden;
+    pointer-events: none;
+    text-align: center;
+    transition: opacity 350ms ease;
+    user-select: none;
+    visibility: hidden;
+  }
+}
+
+@for $i from 0 through $tab-count {
+  #tab-button-#{$i} {
+    &:checked {
+      & ~ .slider-wrapper .tabs-nav-list,
+      & ~ .tabs-nav-list {
+        .tab-button {
+          &[for='tab-button-#{$i}'] {
+
+            &,
+            & .tab-text {
+              color: map-get($app, red);
+              font-weight: 700;
+              font-family: 'DM Sans', sans-serif;
+              opacity: 1;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+
+      & ~ .tabs-content-wrapper {
+        #tab-content-#{$i} {
+          max-height: initial;
+          opacity: 1;
+          overflow: auto;
+          pointer-events: auto;
+          user-select: auto;
+          visibility: visible;
+
+          .description-wrapper {
+            max-height: 340px;
+            overflow: auto;
+
+            @include mq($from: desktop-xs) {
+              max-height: unset;
+            }
+          }
+
+          p {
+            @include x-rem(font-size, 13px);
+            @include x-rem(line-height, 20px);
+            color: map-get($app, dark-grey);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            text-align: left;
+
+            @include mq($from: desktop-xs) {
+              @include x-rem(font-size, 16px);
+              @include x-rem(line-height, 30px);
+            }
+          }
+
+          ul {
+            padding-left: 20px;
+
+            li {
+              @include x-rem(font-size, 13px);
+              @include x-rem(line-height, 20px);
+              color: map-get($app, dark-grey);
+              font-family: 'DM Sans', sans-serif;
+              font-weight: 500;
+              text-align: left;
+
+              &:before {
+                color: map-get($app, text-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@for $i from 0 through $tab-count {
+  #specs-button-#{$i} {
+    &:checked {
+      & ~ .slider-wrapper .tabs-nav-list,
+      & ~ .tabs-nav-list {
+        .tab-button {
+          &[for='specs-button-#{$i}'] {
+
+            &,
+            & .tab-text {
+              font-weight: 700;
+              font-family: "SuisseLight";
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      & ~ .tabs-content-wrapper {
+        #specs-content-#{$i} {
+          max-height: initial;
+          opacity: 1;
+          pointer-events: auto;
+          user-select: auto;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

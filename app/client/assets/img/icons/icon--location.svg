@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="8px" viewBox="0 0 5 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>location-pointer copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0075 0.005 5 0.005 5 8 0.0075 8"></polygon>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Copy-2" transform="translate(-81.000000, -180.000000)">
+            <g id="icon--contact" transform="translate(26.000000, 177.000000)">
+                <g id="location" transform="translate(55.000000, 1.000000)">
+                    <g id="location-pointer-copy" transform="translate(0.000000, 2.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M2.5,0 C1.119125,0 0,1.119625 0,2.5 C0,4.88725 2.5,8 2.5,8 C2.5,8 5,4.88725 5,2.5 C5,1.119625 3.880875,0 2.5,0 Z M2.5,3.879875 C1.754375,3.879875 1.149875,3.275375 1.149875,2.52975 C1.149875,1.784125 1.754375,1.180125 2.5,1.180125 C3.245625,1.180125 3.850125,1.784125 3.850125,2.52975 C3.850125,3.275375 3.245625,3.879875 2.5,3.879875 Z" id="Fill-1" fill="#AB081C" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
